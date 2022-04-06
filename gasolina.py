@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 #Criando o arquivo CSV
 
 %%writefile gasolina.csv
-Dia,Preço
+Dia,Custo
 1,5.11
 2,4.99
 3,5.02
@@ -25,8 +25,8 @@ gasolina_df = pd.read_csv('gasolina.csv')
 
 #Construindo um gráfico de linhas com base no dataframe
 
-gasolina_grafico = sns.lineplot(data=gasolina_df, x= "Dia", y= "Preço", color='red')
-gasolina_grafico.set_title('Preço médio da gasolina em São Paulo - SP (Julho-2021)')
+gasolina_grafico = sns.lineplot(data=gasolina_df, x= "Dia", y= "Custo", color='green')
+gasolina_grafico.set_title('Preço médio da gasolina na cidade de São Paulo - SP em Julho de 2021')
 plt.savefig('gasolina.png')
 plt.show(gasolina_grafico)
 
